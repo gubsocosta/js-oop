@@ -1,7 +1,10 @@
-import { Client } from "./Client.s";
+import { Client } from "./Client.js";
 
 export class Account {
     constructor(initialBalance, client, agency) {
+        if(this.constructor === Account) {
+            throw new Error('This abstract class can not be instancied');
+        }
         this._balance = initialBalance;
         this._client = client;
         this._agency = agency;

@@ -1,14 +1,9 @@
 import { Client } from './Client.js';
 import { CurrentAccount } from './CurrentAccount.js';
+import { Account } from './Account.js';
 
-const client1 = new Client();
-const account1 = new CurrentAccount();
+const client1 = new Client('Gabriel', '11223344');
+const client2 = new Client('Joao', '33221144');
 
-client1.name = 'Gabriel Costa';
-client1.cpf = '1112223300';
-
-account1.toDeposit(200);
-account1.agency = 1001;
-
-console.log(client1);
-console.log(account1);
+const account1 = new CurrentAccount(client1, 1001);
+const account2 = new Account(200, )
