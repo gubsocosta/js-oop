@@ -1,9 +1,16 @@
 import { Client } from './Client.js';
-import { CurrentAccount } from './CurrentAccount.js';
-import { Account } from './Account.js';
+import { Head } from './Employees/Head.js';
+import { Director } from './Employees/Director.js';
+import { SystemAuth } from './Systems/SystemAuth.js'
 
-const client1 = new Client('Gabriel', '11223344');
-const client2 = new Client('Joao', '33221144');
 
-const account1 = new CurrentAccount(client1, 1001);
-const account2 = new Account(200, )
+const client1 = new Client('Joao', '12345678900');
+const head = new Head('Gabriel', '1112223330', 5000);
+
+head.createPassword('123456');
+
+const clientIsLogged = SystemAuth.login(client1, '123');
+const headIsLogged = SystemAuth.login(head, '123456');
+
+console.log(clientIsLogged);
+console.log(headIsLogged);

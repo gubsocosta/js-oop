@@ -1,4 +1,4 @@
-import { Client } from "./Client.js";
+import { Client } from "../Client.js.js";
 
 export class Account {
     constructor(initialBalance, client, agency) {
